@@ -12,8 +12,10 @@ public class PlayerController : MonoBehaviour
     public Transform feet;
     public LayerMask groundLayers;
 
+    [Space]
     public Transform Bulletspawn;
     public GameObject BulletOBJ;
+    public int bulletDamage;
 
     private bool FacingRight = true;
 

@@ -385,6 +385,7 @@ MonoBehaviour:
     m_Bits: 64
   Bulletspawn: {fileID: 229576282}
   BulletOBJ: {fileID: 1973981103228366765, guid: 090f68b2461f40c4fb4926a27fbe02b5, type: 3}
+  bulletDamage: 10
 --- !u!212 &491123879
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -781,7 +782,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 455db13061d947c4f852b5c1fd6a164a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 50
+  Health: 250
 --- !u!61 &1204932021
 BoxCollider2D:
   m_ObjectHideFlags: 0

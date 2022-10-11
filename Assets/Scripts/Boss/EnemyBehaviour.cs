@@ -25,7 +25,7 @@ public class EnemyBehaviour : MonoBehaviour
         GetComponent<SpriteRenderer>().color = Color.red;
         StartCoroutine(ColourChange());
 
-        if (Health == 0)
+        if (Health <= 0)
         {
             Destroy(gameObject);
         }

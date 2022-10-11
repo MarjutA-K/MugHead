@@ -9,12 +9,14 @@ public class BulletBehaviour : MonoBehaviour
     public Rigidbody2D rb;
 
     public GameObject Boss;
+    public GameObject Player;
 
     // Start is called before the first frame update
     void Start()
     {
         rb.velocity = transform.right * speed;
 
+        Player = GameObject.Find("Player");
         Boss = GameObject.Find("EnemyTest");
     }
 
@@ -33,7 +35,7 @@ public class BulletBehaviour : MonoBehaviour
     {
         if(collision.CompareTag("Boss"))
         {
-            Boss.GetComponent<EnemyBehaviour>().EnemyDamage(10);
+            Boss.GetComponent<EnemyBehaviour>().EnemyDamage(Player.GetComponent<PlayerController>().bulletDamage);
 
             Destroy(gameObject);
         }
