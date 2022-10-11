@@ -12,6 +12,11 @@ public class PlayerController : MonoBehaviour
     public Transform feet;
     public LayerMask groundLayers;
 
+    public Transform Bulletspawn;
+    public GameObject BulletOBJ;
+
+    private bool FacingRight = true;
+
     //start is called before the first frame update
     void Start()
     {
@@ -25,6 +30,20 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isGrounded())
         {
             Jump();
+        }
+
+        if(Input.GetButtonDown("Fire1"))
+        {
+            Shooting();
+        }
+
+        if(moveInput < 0 && FacingRight)
+        {
+            FlipSprite();
+        }
+        else if(moveInput > 0 && !FacingRight)
+        {
+            FlipSprite();
         }
     }
 
@@ -52,5 +71,17 @@ public class PlayerController : MonoBehaviour
         }
 
         return false;
+    }
+
+    void Shooting()
+    {
+        Instantiate(BulletOBJ, Bulletspawn.position, Bulletspawn.rotation);
+    }
+
+    void FlipSprite()
+    {
+        FacingRight = !FacingRight;
+
+        transform.Rotate(0f, 180f, 0f);
     }
 }
