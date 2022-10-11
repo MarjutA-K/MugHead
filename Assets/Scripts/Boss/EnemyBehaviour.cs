@@ -5,18 +5,27 @@ using UnityEngine;
 public class EnemyBehaviour : MonoBehaviour
 {
     public int Health = 50;
+    public int EnemyBulletDamage = 1;
+
+    float shootCooldown;
+    float nextShoot;
+
+    public GameObject Bullet;
+    public Transform BulletSpawn;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        shootCooldown = 2.5f;
+        nextShoot = Time.time;
     }
 
     // Update is called once per frame
     void Update()
     {
         print(Health);
+        ShootThingyMajig();
     }
 
     public void EnemyDamage(int damage)
@@ -28,6 +37,15 @@ public class EnemyBehaviour : MonoBehaviour
         if (Health <= 0)
         {
             Destroy(gameObject);
+        }
+    }
+
+    void ShootThingyMajig()
+    {
+        if (Time.time > nextShoot)
+        {
+            Instantiate(Bullet, BulletSpawn.position, BulletSpawn.rotation);
+            nextShoot = Time.time + shootCooldown;
         }
     }
 

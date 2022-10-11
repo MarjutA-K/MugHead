@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     public float speed;
     public float jumpForce;
     private float moveInput;
+    public int Health = 3;
 
     private Rigidbody2D rb;
     public Transform feet;
@@ -112,6 +113,16 @@ public class PlayerController : MonoBehaviour
         transform.Rotate(0f, 180f, 0f);
 
         animator.SetBool("IsWalking?", true);
+    }
+
+    public void PlayerDamage(int damage)
+    {
+        Health -= damage;
+
+        if (Health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     void Cooldown()
