@@ -16,7 +16,7 @@ public class EnemyBulletBehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Player = GameObject.Find("Player");
+        Player = GameObject.Find("TestPlayer");
         Boss = GameObject.Find("EnemyTest");
 
         moveDir = (Player.transform.position - transform.position).normalized * speed;
