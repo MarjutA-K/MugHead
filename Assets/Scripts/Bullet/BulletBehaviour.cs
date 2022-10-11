@@ -16,7 +16,7 @@ public class BulletBehaviour : MonoBehaviour
     {
         rb.velocity = transform.right * speed;
 
-        Player = GameObject.Find("Player");
+        Player = GameObject.Find("TestPlayer");
         Boss = GameObject.Find("EnemyTest");
     }
 

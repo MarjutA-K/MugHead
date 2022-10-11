@@ -17,12 +17,21 @@ public class PlayerController : MonoBehaviour
     public GameObject BulletOBJ;
     public int bulletDamage;
 
+    public int BulletAmount = 5;
+    public float ShootCooldown;
+
     private bool FacingRight = true;
+
+    Animator animator;
 
     //start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        animator = GetComponent<Animator>();
+
+        ShootCooldown = 5;
     }
 
     private void Update()
@@ -47,6 +56,18 @@ public class PlayerController : MonoBehaviour
         {
             FlipSprite();
         }
+        
+        if(moveInput == 0)
+        {
+            animator.SetBool("IsWalking?", false);
+        }
+
+        if (BulletAmount == 0)
+        {
+            Cooldown();
+        }
+
+        print(ShootCooldown);
     }
 
     private void FixedUpdate()
@@ -77,7 +98,11 @@ public class PlayerController : MonoBehaviour
 
     void Shooting()
     {
-        Instantiate(BulletOBJ, Bulletspawn.position, Bulletspawn.rotation);
+        if(BulletAmount > 0)
+        {
+            Instantiate(BulletOBJ, Bulletspawn.position, Bulletspawn.rotation);
+            BulletAmount -= 1;
+        }
     }
 
     void FlipSprite()
@@ -85,5 +110,18 @@ public class PlayerController : MonoBehaviour
         FacingRight = !FacingRight;
 
         transform.Rotate(0f, 180f, 0f);
+
+        animator.SetBool("IsWalking?", true);
     }
+
+    void Cooldown()
+    {
+        ShootCooldown -= Time.deltaTime;
+        if(ShootCooldown < 0)
+        {
+            BulletAmount += 5;
+            ShootCooldown = 5;
+        }
+    }
+
 }
