@@ -31,8 +31,6 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         animator = GetComponent<Animator>();
-
-        ShootCooldown = 5;
     }
 
     private void Update()
@@ -131,7 +129,7 @@ public class PlayerController : MonoBehaviour
         if(ShootCooldown < 0)
         {
             BulletAmount += 5;
-            ShootCooldown = 5;
+            ShootCooldown = 2;
         }
     }
 
