@@ -16,13 +16,8 @@ public class BulletBehaviour : MonoBehaviour
     {
         rb.velocity = transform.right * speed;
 
-<<<<<<< HEAD
         Player = GameObject.Find("TestPlayer");
-        Boss = GameObject.Find("Boss");
-=======
-        Player = GameObject.Find("Player");
         Boss = GameObject.Find("EnemyTest");
->>>>>>> c600fba3cdc3bc5bfe244449be595d86e51a3cca
     }
 
     // Update is called once per frame
