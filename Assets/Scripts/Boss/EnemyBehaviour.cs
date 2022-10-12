@@ -15,6 +15,8 @@ public class EnemyBehaviour : MonoBehaviour
 
     public Animator anim;
 
+    public GameObject Player;
+
     private bool Phase1 = true;
     private bool Phase2 = false;
     private bool Phase3 = false;
@@ -41,7 +43,7 @@ public class EnemyBehaviour : MonoBehaviour
             Phase3 = true;
         }
 
-        if (Phase1)
+        if (Phase1 && Player.active)
         {
             anim.SetBool("Phase3", false);
             anim.SetBool("Phase1", true);

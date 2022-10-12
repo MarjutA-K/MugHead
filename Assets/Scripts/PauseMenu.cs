@@ -48,15 +48,18 @@ public class PauseMenu : MonoBehaviour
             }
         }
 
-        if (verticalInput == 1 && !OptionChange)
+        if(IsPaused)
         {
-            CurrentOption -= 1;
-            OptionChange = true;
-        }
-        else if (verticalInput == -1 && !OptionChange)
-        {
-            CurrentOption += 1;
-            OptionChange = true;
+            if (verticalInput == 1 && !OptionChange)
+            {
+                CurrentOption -= 1;
+                OptionChange = true;
+            }
+            else if (verticalInput == -1 && !OptionChange)
+            {
+                CurrentOption += 1;
+                OptionChange = true;
+            }
         }
 
         if (CurrentOption > Options)

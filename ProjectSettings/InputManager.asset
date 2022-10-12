@@ -294,11 +294,11 @@ InputManager:
     axis: 0
     joyNum: 0
   - serializedVersion: 3
-    m_Name: Test
+    m_Name: Select
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: 
+    positiveButton: joystick button 8
     altNegativeButton: 
     altPositiveButton: 
     gravity: 0
@@ -306,8 +306,8 @@ InputManager:
     sensitivity: 0
     snap: 0
     invert: 0
-    type: 2
-    axis: 9
+    type: 0
+    axis: 0
     joyNum: 0
   - serializedVersion: 3
     m_Name: Enable Debug Button 2

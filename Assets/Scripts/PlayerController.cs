@@ -23,6 +23,8 @@ public class PlayerController : MonoBehaviour
 
     private bool FacingRight = true;
 
+    private GameObject Player;
+
     Animator animator;
 
     //start is called before the first frame update
@@ -31,6 +33,8 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         animator = GetComponent<Animator>();
+
+        Player = gameObject;
     }
 
     private void Update()
@@ -115,10 +119,13 @@ public class PlayerController : MonoBehaviour
     public void PlayerDamage(int damage)
     {
         Health -= damage;
+        GetComponent<SpriteRenderer>().color = Color.red;
+        StartCoroutine(HitDetect());
 
         if (Health <= 0)
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
+            Player.SetActive(false);
         }
     }
 
@@ -130,5 +137,11 @@ public class PlayerController : MonoBehaviour
             BulletAmount += 5;
             ShootCooldown = 2;
         }
+    }
+
+    IEnumerator HitDetect()
+    {
+        yield return new WaitForSeconds(0.1f);
+        GetComponent<SpriteRenderer>().color = Color.white;
     }
 }
