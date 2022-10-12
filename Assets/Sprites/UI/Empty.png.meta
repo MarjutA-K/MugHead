@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Sprites/UI/Empty.png.meta
 guid: 1d13375a3b3f4ff4185c91232fa8c5b7
-========
-guid: 7dbc3682226109e459b43b439bd59085
->>>>>>>> c600fba3cdc3bc5bfe244449be595d86e51a3cca:Assets/Sprites/EnemySheets/BoomerrangSheet.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
