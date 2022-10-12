@@ -25,7 +25,7 @@ public class EnemyBehaviour : MonoBehaviour
     void Update()
     {
         print(Health);
-        ShootThingyMajig();
+        BossShoot();
     }
 
     public void EnemyDamage(int damage)
@@ -40,7 +40,7 @@ public class EnemyBehaviour : MonoBehaviour
         }
     }
 
-    void ShootThingyMajig()
+    void BossShoot()
     {
         if (Time.time > nextShoot)
         {
