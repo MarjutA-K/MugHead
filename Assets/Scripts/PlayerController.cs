@@ -37,6 +37,7 @@ public class PlayerController : MonoBehaviour
     {
         moveInput = Input.GetAxisRaw("Horizontal");
 
+
         if (Input.GetButtonDown("Jump") && isGrounded())
         {
             Jump();
@@ -65,8 +66,6 @@ public class PlayerController : MonoBehaviour
         {
             Cooldown();
         }
-
-        print(ShootCooldown);
     }
 
     private void FixedUpdate()
@@ -132,5 +131,4 @@ public class PlayerController : MonoBehaviour
             ShootCooldown = 2;
         }
     }
-
 }
