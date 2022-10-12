@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: 3ae2f50555fc95f4a8b56aca7be8428c
+<<<<<<< HEAD:Assets/EnemySheets/Bullet.png.meta
+guid: 6b1a38a39d6e3bc468b37fa749429b3b
+=======
+guid: 5db4e9b53bc252041b02a37f7269c55f
+>>>>>>> c600fba3cdc3bc5bfe244449be595d86e51a3cca:Assets/Sprites/EnemySheets/Bullet.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +38,11 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
+<<<<<<< HEAD:Assets/EnemySheets/Bullet.png.meta
+    filterMode: 0
+=======
     filterMode: 1
+>>>>>>> c600fba3cdc3bc5bfe244449be595d86e51a3cca:Assets/Sprites/EnemySheets/Bullet.png.meta
     aniso: 1
     mipBias: 0
     wrapU: 1

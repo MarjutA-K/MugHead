@@ -16,8 +16,13 @@ public class EnemyBulletBehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+<<<<<<< HEAD
         Player = GameObject.Find("TestPlayer");
+        Boss = GameObject.Find("Boss");
+=======
+        Player = GameObject.Find("Player");
         Boss = GameObject.Find("EnemyTest");
+>>>>>>> c600fba3cdc3bc5bfe244449be595d86e51a3cca
 
         moveDir = (Player.transform.position - transform.position).normalized * speed;
         rb.velocity = new Vector2(moveDir.x, moveDir.y);
@@ -39,7 +44,6 @@ public class EnemyBulletBehaviour : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            print("oof owch owie");
 
             Player.GetComponent<PlayerController>().PlayerDamage(Boss.GetComponent<EnemyBehaviour>().EnemyBulletDamage);
 
