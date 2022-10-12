@@ -13,6 +13,11 @@ public class EnemyBehaviour : MonoBehaviour
     public GameObject Bullet;
     public Transform BulletSpawn;
 
+    public Animator anim;
+
+    private bool Phase1 = true;
+    private bool Phase2 = false;
+    private bool Phase3 = false;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +29,35 @@ public class EnemyBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        BossShoot();
+        if (Health < 501)
+        {
+            Phase1 = false;
+            Phase2 = true;
+        }
+    
+        if (Health < 251)
+        {
+            Phase2 = false;
+            Phase3 = true;
+        }
+
+        if (Phase1)
+        {
+            anim.SetBool("Phase3", false);
+            anim.SetBool("Phase1", true);
+            BossShoot();
+        }
+        else if(Phase2)
+        {
+            anim.SetBool("Phase1", false);
+            anim.SetBool("Phase2", true);
+        }
+        
+        if(Phase3)
+        {
+            anim.SetBool("Phase2", false);
+            anim.SetBool("Phase3", true);
+        }
     }
 
     public void EnemyDamage(int damage)
@@ -51,6 +84,6 @@ public class EnemyBehaviour : MonoBehaviour
     IEnumerator ColourChange()
     {
         yield return new WaitForSeconds(0.1f);
-        GetComponent<SpriteRenderer>().color = Color.yellow;
+        GetComponent<SpriteRenderer>().color = Color.white;
     }
 }

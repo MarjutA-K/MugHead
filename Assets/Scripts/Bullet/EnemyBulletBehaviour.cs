@@ -17,7 +17,7 @@ public class EnemyBulletBehaviour : MonoBehaviour
     void Start()
     {
         Player = GameObject.Find("TestPlayer");
-        Boss = GameObject.Find("EnemyTest");
+        Boss = GameObject.Find("Boss");
 
         moveDir = (Player.transform.position - transform.position).normalized * speed;
         rb.velocity = new Vector2(moveDir.x, moveDir.y);
@@ -39,7 +39,6 @@ public class EnemyBulletBehaviour : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            print("oof owch owie");
 
             Player.GetComponent<PlayerController>().PlayerDamage(Boss.GetComponent<EnemyBehaviour>().EnemyBulletDamage);
 
