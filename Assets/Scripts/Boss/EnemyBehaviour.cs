@@ -43,7 +43,7 @@ public class EnemyBehaviour : MonoBehaviour
             Phase3 = true;
         }
 
-        if (Phase1 && Player.active)
+        if (Phase1 && Player.activeInHierarchy)
         {
             anim.SetBool("Phase3", false);
             anim.SetBool("Phase1", true);
