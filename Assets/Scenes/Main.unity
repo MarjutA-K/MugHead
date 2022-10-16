@@ -2640,6 +2640,9 @@ MonoBehaviour:
   vineAnimator1: {fileID: 1986568070}
   vineAnimator2: {fileID: 213036951}
   vineAnimator3: {fileID: 779685240}
+  vine1: {fileID: 1986568069}
+  vine2: {fileID: 213036950}
+  vine3: {fileID: 779685239}
 --- !u!4 &1606702845
 Transform:
   m_ObjectHideFlags: 0
