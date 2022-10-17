@@ -13,7 +13,7 @@ public class Health : MonoBehaviour
 
     private void Update()
     {
-        health = GetComponent<PlayerController>().Health;
+        health = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>().playerHealth;
 
         for (int i = 0; i < hearts.Length; i++)
         {

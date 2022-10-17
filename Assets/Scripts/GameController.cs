@@ -13,6 +13,9 @@ public class GameController : MonoBehaviour
     public bool bossIsDead;
     public GameObject boss;
 
+    [Space]
+    public int playerHealth;
+
     // Update is called once per frame
     void Update()
     {

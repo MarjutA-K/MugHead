@@ -2034,7 +2034,6 @@ GameObject:
   - component: {fileID: 1024470753}
   - component: {fileID: 1024470752}
   - component: {fileID: 1024470751}
-  - component: {fileID: 1024470754}
   - component: {fileID: 1024470750}
   - component: {fileID: 1024470749}
   - component: {fileID: 1024470748}
@@ -2205,24 +2204,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1024470754
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1024470747}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 320a61d3518ecef459eefeabd738c620, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hearts:
-  - {fileID: 452115244}
-  - {fileID: 1914273160}
-  - {fileID: 1845875976}
-  fullHeart: {fileID: 21300000, guid: d26bf648d5daa714aaf10f5a67a5420e, type: 3}
-  emptyHeart: {fileID: 21300000, guid: 1d13375a3b3f4ff4185c91232fa8c5b7, type: 3}
 --- !u!1 &1077629019
 GameObject:
   m_ObjectHideFlags: 0
@@ -3943,6 +3924,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1872064527}
   - component: {fileID: 1872064526}
+  - component: {fileID: 1872064528}
   m_Layer: 0
   m_Name: Game Controller
   m_TagString: GameController
@@ -3966,6 +3948,7 @@ MonoBehaviour:
   scoreDisplay: {fileID: 1561425217}
   bossIsDead: 0
   boss: {fileID: 1166459212}
+  playerHealth: 0
 --- !u!4 &1872064527
 Transform:
   m_ObjectHideFlags: 0
@@ -3981,6 +3964,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1872064528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872064525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 320a61d3518ecef459eefeabd738c620, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hearts:
+  - {fileID: 452115244}
+  - {fileID: 1914273160}
+  - {fileID: 1845875976}
+  fullHeart: {fileID: 21300000, guid: d26bf648d5daa714aaf10f5a67a5420e, type: 3}
+  emptyHeart: {fileID: 21300000, guid: 1d13375a3b3f4ff4185c91232fa8c5b7, type: 3}
 --- !u!1 &1914273157
 GameObject:
   m_ObjectHideFlags: 0
