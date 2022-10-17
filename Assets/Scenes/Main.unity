@@ -414,6 +414,53 @@ MonoBehaviour:
   vine: {fileID: 213036950}
   player: {fileID: 1024470747}
   boss: {fileID: 1166459212}
+--- !u!1 &285823798
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 285823800}
+  - component: {fileID: 285823799}
+  m_Layer: 0
+  m_Name: Attack3Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &285823799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285823798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3921f6439f338ca4498fa6e0dfba6357, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ChibakuTensei: {fileID: 3103786114204744676, guid: c46824c6f6586a148bcdf5fd157b2387, type: 3}
+  ChibakuTenseiSpawn: {fileID: 1286287775}
+  Player: {fileID: 1024470747}
+--- !u!4 &285823800
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285823798}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.4404202, y: 0.013601758, z: -0.14979619}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &452115241
 GameObject:
   m_ObjectHideFlags: 0
@@ -2492,8 +2539,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 455db13061d947c4f852b5c1fd6a164a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 750
-  baseHelath: 750
+  Health: 251
+  baseHelath: 251
   EnemyBulletDamage: 1
   baseScore: 50
   Vines: {fileID: 1606702844}
@@ -2504,6 +2551,7 @@ MonoBehaviour:
   Vine4: {fileID: 806552580}
   Vine5: {fileID: 546352526}
   Vine6: {fileID: 1077629019}
+  FinalPhase: {fileID: 285823798}
   Bullet: {fileID: 1973981103228366765, guid: ce8b28f8b4fffe4479ea0e771d6cf7c1, type: 3}
   BulletSpawn: {fileID: 1594256660}
   anim: {fileID: 1166459217}
@@ -2608,7 +2656,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1166459212}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3921f6439f338ca4498fa6e0dfba6357, type: 3}
   m_Name: 

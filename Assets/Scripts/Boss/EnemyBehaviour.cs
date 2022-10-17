@@ -17,6 +17,7 @@ public class EnemyBehaviour : MonoBehaviour
     public GameObject Vine4;
     public GameObject Vine5;
     public GameObject Vine6;
+    public GameObject FinalPhase;
 
     float shootCooldown;
     float nextShoot;
@@ -50,6 +51,7 @@ public class EnemyBehaviour : MonoBehaviour
         Vine4.SetActive(false);
         Vine5.SetActive(false);
         Vine6.SetActive(false);
+        FinalPhase.SetActive(false);
         gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
         Vines = Vines.GetComponent<GroundVineBehavior>();
     }
@@ -95,7 +97,7 @@ public class EnemyBehaviour : MonoBehaviour
             {
                 vines[i].SetActive(false);
             }
-
+            FinalPhase.SetActive(true);
             Vines.StopAllCoroutines();
         }
     }
