@@ -9,7 +9,7 @@ public class EnemyBehaviour : MonoBehaviour
     public int EnemyBulletDamage = 1;
     
     public int baseScore = 50;
-    public GameObject Vines;
+    public GroundVineBehavior Vines;
     public GameObject GroundVine;
     public GameObject Vine1;
     public GameObject Vine2;
@@ -51,6 +51,7 @@ public class EnemyBehaviour : MonoBehaviour
         Vine5.SetActive(false);
         Vine6.SetActive(false);
         gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
+        Vines = Vines.GetComponent<GroundVineBehavior>();
     }
 
     // Update is called once per frame
@@ -73,12 +74,14 @@ public class EnemyBehaviour : MonoBehaviour
             anim.SetBool("Phase3", false);
             anim.SetBool("Phase1", true);
             BossShoot();
+
+            Vines.StopAllCoroutines();
         }
         else if(Phase2)
         {
             anim.SetBool("Phase1", false);
             anim.SetBool("Phase2", true);
-            Vines.GetComponent<GroundVineBehavior>().enabled = true;
+            Vines.enabled = true;
         }
         
         if(Phase3)
@@ -86,13 +89,14 @@ public class EnemyBehaviour : MonoBehaviour
             anim.SetBool("Phase2", false);
             anim.SetBool("Phase3", true);
 
-            Vines.GetComponent<GroundVineBehavior>().enabled = false;
+            Vines.enabled = false;
             GameObject[] vines = GameObject.FindGameObjectsWithTag("Vines");
-
             for(int i = 0; i  < vines.Length; i++)
             {
                 vines[i].SetActive(false);
             }
+
+            Vines.StopAllCoroutines();
         }
     }
 
@@ -108,7 +112,7 @@ public class EnemyBehaviour : MonoBehaviour
             /*gameObject.SetActive(false);*/
             bossKills++;
             Health = Mathf.RoundToInt(baseHelath * difficultyIncrement);
-            gameController.score += Mathf.RoundToInt(baseScore * difficultyIncrement);
+            gameController.score += Mathf.RoundToInt(baseScore * (difficultyIncrement * bossKills == 0? 1: difficultyIncrement * bossKills));
             gameController.bossIsDead = true;
 
             Phase1 = true;

@@ -2125,7 +2125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 6
   jumpForce: 14
-  Health: 9999
+  Health: 3
   feet: {fileID: 1252117020}
   groundLayers:
     serializedVersion: 2
@@ -2492,11 +2492,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 455db13061d947c4f852b5c1fd6a164a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 1
+  Health: 750
   baseHelath: 750
   EnemyBulletDamage: 1
   baseScore: 50
-  Vines: {fileID: 1606702843}
+  Vines: {fileID: 1606702844}
   GroundVine: {fileID: 1200556985}
   Vine1: {fileID: 1986568069}
   Vine2: {fileID: 213036950}
@@ -3414,7 +3414,7 @@ GameObject:
   - component: {fileID: 1606702844}
   m_Layer: 0
   m_Name: VineController
-  m_TagString: Vines
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

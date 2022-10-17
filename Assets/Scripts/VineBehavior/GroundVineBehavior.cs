@@ -38,7 +38,7 @@ public class GroundVineBehavior : MonoBehaviour
     private int reverse_time;
 
     // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
         groundVine.SetActive(false);
         vine1.SetActive(false);
