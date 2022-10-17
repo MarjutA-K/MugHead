@@ -35,6 +35,8 @@ public class GroundVineBehavior : MonoBehaviour
     private int waitTime5;
     private int waitTime6;
 
+    private int reverse_time;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -54,12 +56,14 @@ public class GroundVineBehavior : MonoBehaviour
         startVine5 = true;
         startVine6 = true;
 
-        waitTime1 = Random.Range(6, 15);
-        waitTime2 = Random.Range(6, 15);
-        waitTime3 = Random.Range(6, 15);
-        waitTime4 = Random.Range(16, 25);
-        waitTime5 = Random.Range(16, 25);
-        waitTime6 = Random.Range(16, 25);
+        waitTime1 = Random.Range(2, 13);
+        waitTime2 = Random.Range(4, 15);
+        waitTime3 = Random.Range(2, 13);
+        waitTime4 = Random.Range(12, 22);
+        waitTime5 = Random.Range(14, 22);
+        waitTime6 = Random.Range(12, 22);
+
+        reverse_time = 3;
     }
 
     // Update is called once per frame
@@ -81,7 +85,7 @@ public class GroundVineBehavior : MonoBehaviour
         }
         else
         {
-            StartCoroutine(Vine1Reverse());  
+            StartCoroutine(Vine1Reverse());           
         }
     
         if (startVine2)
@@ -133,7 +137,7 @@ public class GroundVineBehavior : MonoBehaviour
 
     IEnumerator GroundVineStart()
     {
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(1f);
         groundVineAnimator.SetBool("playAnim", true);
         groundVine.SetActive(true);
         startGroundVine = false;
@@ -158,7 +162,7 @@ public class GroundVineBehavior : MonoBehaviour
     // Reverse animation play
     IEnumerator Vine1Reverse()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(reverse_time);
         vineAnimator1.SetFloat("Direction", -1);
         vineAnimator1.Play("VineAnimation", -1, float.NegativeInfinity);
     }
@@ -174,7 +178,7 @@ public class GroundVineBehavior : MonoBehaviour
     // Reverse animation play
     IEnumerator Vine2Reverse()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(reverse_time);
         vineAnimator2.SetFloat("Direction", -1);
         vineAnimator2.Play("VineAnimation2", -1, float.NegativeInfinity);
     }
@@ -190,7 +194,7 @@ public class GroundVineBehavior : MonoBehaviour
     // Reverse animation play
     IEnumerator Vine3Reverse()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(reverse_time);
         vineAnimator3.SetFloat("Direction", -1);
         vineAnimator3.Play("VineAnimation3", -1, float.NegativeInfinity);
     }
@@ -206,7 +210,7 @@ public class GroundVineBehavior : MonoBehaviour
     // Reverse animation play
     IEnumerator Vine4Reverse()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(reverse_time);
         vineAnimator4.SetFloat("Direction", -1);
         vineAnimator4.Play("VineAnimation", -1, float.NegativeInfinity);
     }
@@ -222,7 +226,7 @@ public class GroundVineBehavior : MonoBehaviour
     // Reverse animation play
     IEnumerator Vine5Reverse()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(reverse_time);
         vineAnimator5.SetFloat("Direction", -1);
         vineAnimator5.Play("VineAnimation2", -1, float.NegativeInfinity);
     }
@@ -238,7 +242,7 @@ public class GroundVineBehavior : MonoBehaviour
     // Reverse animation play
     IEnumerator Vine6Reverse()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(reverse_time);
         vineAnimator6.SetFloat("Direction", -1);
         vineAnimator6.Play("VineAnimation3", -1, float.NegativeInfinity);
     }
