@@ -13,7 +13,7 @@ public class LoopingAttack : MonoBehaviour
 
     void Start()
     {
-        cooldown = 5f;
+        cooldown = 13f;
         nextAttack = Time.time;
 
     }
