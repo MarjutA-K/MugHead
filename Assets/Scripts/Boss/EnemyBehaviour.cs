@@ -28,9 +28,9 @@ public class EnemyBehaviour : MonoBehaviour
 
     public GameObject Player;
 
-    private bool Phase1 = true;
-    private bool Phase2 = false;
-    private bool Phase3 = false;
+    public bool Phase1 = true;
+    public bool Phase2 = false;
+    public bool Phase3 = false;
 
     public int bossKills;
     public float difficultyIncrement = 1.1f;
@@ -110,6 +110,11 @@ public class EnemyBehaviour : MonoBehaviour
             Health = Mathf.RoundToInt(baseHelath * difficultyIncrement);
             gameController.score += Mathf.RoundToInt(baseScore * difficultyIncrement);
             gameController.bossIsDead = true;
+
+            Phase1 = true;
+            Phase2 = false;
+            Phase3 = false;
+
             GetComponent<SpriteRenderer>().color = Color.white;
             gameObject.SetActive(false);
         }

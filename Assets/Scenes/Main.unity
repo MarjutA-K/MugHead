@@ -2125,7 +2125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 6
   jumpForce: 14
-  Health: 3
+  Health: 9999
   feet: {fileID: 1252117020}
   groundLayers:
     serializedVersion: 2
@@ -2492,7 +2492,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 455db13061d947c4f852b5c1fd6a164a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 750
+  Health: 1
   baseHelath: 750
   EnemyBulletDamage: 1
   baseScore: 50
@@ -2508,6 +2508,9 @@ MonoBehaviour:
   BulletSpawn: {fileID: 1594256660}
   anim: {fileID: 1166459217}
   Player: {fileID: 1024470747}
+  Phase1: 1
+  Phase2: 0
+  Phase3: 0
   bossKills: 0
   difficultyIncrement: 1.1
 --- !u!212 &1166459215
