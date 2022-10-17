@@ -27,6 +27,8 @@ public class PlayerController : MonoBehaviour
 
     Animator animator;
 
+    private GameController gameController;
+
     //start is called before the first frame update
     void Start()
     {
@@ -35,6 +37,9 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
 
         Player = gameObject;
+
+        gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
+        gameController.playerHealth = Health;
     }
 
     private void Update()
@@ -119,6 +124,8 @@ public class PlayerController : MonoBehaviour
     public void PlayerDamage(int damage)
     {
         Health -= damage;
+        gameController.playerHealth = Health;
+        
         GetComponent<SpriteRenderer>().color = Color.red;
         StartCoroutine(HitDetect());
 

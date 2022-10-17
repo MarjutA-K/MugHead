@@ -5,8 +5,10 @@ using UnityEngine;
 public class EnemyBehaviour : MonoBehaviour
 {
     public int Health = 50;
+    public int baseHelath = 750;
     public int EnemyBulletDamage = 1;
-
+    
+    public int baseScore = 50;
     public GameObject Vines;
     public GameObject GroundVine;
     public GameObject Vine1;
@@ -30,6 +32,11 @@ public class EnemyBehaviour : MonoBehaviour
     private bool Phase2 = false;
     private bool Phase3 = false;
 
+    public int bossKills;
+    public float difficultyIncrement = 1.1f;
+
+    private GameController gameController;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,6 +50,7 @@ public class EnemyBehaviour : MonoBehaviour
         Vine4.SetActive(false);
         Vine5.SetActive(false);
         Vine6.SetActive(false);
+        gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
     }
 
     // Update is called once per frame
@@ -96,7 +104,14 @@ public class EnemyBehaviour : MonoBehaviour
 
         if (Health <= 0)
         {
-            Destroy(gameObject);
+            /*Destroy(gameObject);*/
+            /*gameObject.SetActive(false);*/
+            bossKills++;
+            Health = Mathf.RoundToInt(baseHelath * difficultyIncrement);
+            gameController.score += Mathf.RoundToInt(baseScore * difficultyIncrement);
+            gameController.bossIsDead = true;
+            GetComponent<SpriteRenderer>().color = Color.white;
+            gameObject.SetActive(false);
         }
     }
 
