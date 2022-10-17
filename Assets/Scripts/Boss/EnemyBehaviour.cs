@@ -7,6 +7,15 @@ public class EnemyBehaviour : MonoBehaviour
     public int Health = 50;
     public int EnemyBulletDamage = 1;
 
+    public GameObject Vines;
+    public GameObject GroundVine;
+    public GameObject Vine1;
+    public GameObject Vine2;
+    public GameObject Vine3;
+    public GameObject Vine4;
+    public GameObject Vine5;
+    public GameObject Vine6;
+
     float shootCooldown;
     float nextShoot;
 
@@ -26,6 +35,14 @@ public class EnemyBehaviour : MonoBehaviour
     {
         shootCooldown = 2.5f;
         nextShoot = Time.time;
+
+        GroundVine.SetActive(false);
+        Vine1.SetActive(false);
+        Vine2.SetActive(false);
+        Vine3.SetActive(false);
+        Vine4.SetActive(false);
+        Vine5.SetActive(false);
+        Vine6.SetActive(false);
     }
 
     // Update is called once per frame
@@ -53,12 +70,21 @@ public class EnemyBehaviour : MonoBehaviour
         {
             anim.SetBool("Phase1", false);
             anim.SetBool("Phase2", true);
+            Vines.GetComponent<GroundVineBehavior>().enabled = true;
         }
         
         if(Phase3)
         {
             anim.SetBool("Phase2", false);
             anim.SetBool("Phase3", true);
+
+            Vines.GetComponent<GroundVineBehavior>().enabled = false;
+            GameObject[] vines = GameObject.FindGameObjectsWithTag("Vines");
+
+            for(int i = 0; i  < vines.Length; i++)
+            {
+                vines[i].SetActive(false);
+            }
         }
     }
 

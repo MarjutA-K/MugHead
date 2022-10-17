@@ -280,7 +280,7 @@ GameObject:
   - component: {fileID: 213036955}
   m_Layer: 0
   m_Name: VineSheet_0 (1)
-  m_TagString: Untagged
+  m_TagString: Vines
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -385,7 +385,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.03}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -876,7 +876,7 @@ GameObject:
   - component: {fileID: 546352531}
   m_Layer: 0
   m_Name: VineSheet_0 (4)
-  m_TagString: Untagged
+  m_TagString: Vines
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -914,7 +914,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.03}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1331,7 +1331,7 @@ GameObject:
   - component: {fileID: 779685244}
   m_Layer: 0
   m_Name: VineSheet_0 (2)
-  m_TagString: Untagged
+  m_TagString: Vines
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1436,7 +1436,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.03}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1480,7 +1480,7 @@ GameObject:
   - component: {fileID: 806552585}
   m_Layer: 0
   m_Name: VineSheet_0 (3)
-  m_TagString: Untagged
+  m_TagString: Vines
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1585,7 +1585,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.03}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2237,7 +2237,7 @@ GameObject:
   - component: {fileID: 1077629024}
   m_Layer: 0
   m_Name: VineSheet_0 (5)
-  m_TagString: Untagged
+  m_TagString: Vines
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2342,7 +2342,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.03}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2510,8 +2510,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 455db13061d947c4f852b5c1fd6a164a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 750
+  Health: 260
   EnemyBulletDamage: 1
+  Vines: {fileID: 1606702843}
+  GroundVine: {fileID: 1200556985}
+  Vine1: {fileID: 1986568069}
+  Vine2: {fileID: 213036950}
+  Vine3: {fileID: 779685239}
+  Vine4: {fileID: 806552580}
+  Vine5: {fileID: 546352526}
+  Vine6: {fileID: 1077629019}
   Bullet: {fileID: 1973981103228366765, guid: ce8b28f8b4fffe4479ea0e771d6cf7c1, type: 3}
   BulletSpawn: {fileID: 1594256660}
   anim: {fileID: 1166459217}
@@ -2634,7 +2642,7 @@ GameObject:
   - component: {fileID: 1200556990}
   m_Layer: 0
   m_Name: GroundVineSheet_0
-  m_TagString: Untagged
+  m_TagString: Vines
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2765,9 +2773,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1024470749}
-  vine: {fileID: 0}
+  vine: {fileID: 1200556985}
   player: {fileID: 1024470747}
-  boss: {fileID: 0}
+  boss: {fileID: 1166459212}
 --- !u!1 &1252117019
 GameObject:
   m_ObjectHideFlags: 0
@@ -3278,10 +3286,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1606702845}
   - component: {fileID: 1606702844}
-  - component: {fileID: 1606702846}
   m_Layer: 0
   m_Name: VineController
-  m_TagString: Untagged
+  m_TagString: Vines
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3293,7 +3300,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1606702843}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ae2d9cd2d4d2701478db03807945381a, type: 3}
   m_Name: 
@@ -3327,22 +3334,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1606702846
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1606702843}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a639d284b0ab2f742a9efeabb3df1dae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 1024470749}
-  vine: {fileID: 0}
-  player: {fileID: 1024470747}
-  boss: {fileID: 0}
 --- !u!1 &1632928648
 GameObject:
   m_ObjectHideFlags: 0
@@ -4267,7 +4258,7 @@ GameObject:
   - component: {fileID: 1986568074}
   m_Layer: 0
   m_Name: VineSheet_0
-  m_TagString: Untagged
+  m_TagString: Vines
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4372,7 +4363,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.03}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
