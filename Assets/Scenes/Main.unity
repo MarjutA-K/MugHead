@@ -2290,7 +2290,7 @@ MonoBehaviour:
     m_Bits: 64
   Bulletspawn: {fileID: 189653589}
   BulletOBJ: {fileID: 1973981103228366765, guid: 090f68b2461f40c4fb4926a27fbe02b5, type: 3}
-  bulletDamage: 10
+  bulletDamage: 20
   BulletAmount: 5
   ShootCooldown: 2
 --- !u!212 &1024470752
@@ -2650,7 +2650,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 455db13061d947c4f852b5c1fd6a164a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 420
+  Health: 750
   baseHelath: 750
   EnemyBulletDamage: 1
   baseScore: 50
