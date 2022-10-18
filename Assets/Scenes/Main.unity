@@ -209,7 +209,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.05896224, g: 0.4245283, b: 0, a: 1}
+  m_Color: {r: 0.20392157, g: 0.36078432, b: 0.10980392, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -606,7 +606,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.3137255, g: 0.5176471, b: 0.6745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -2539,7 +2539,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 455db13061d947c4f852b5c1fd6a164a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 750
+  Health: 420
   baseHelath: 750
   EnemyBulletDamage: 1
   baseScore: 50
