@@ -2539,8 +2539,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 455db13061d947c4f852b5c1fd6a164a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 251
-  baseHelath: 251
+  Health: 750
+  baseHelath: 750
   EnemyBulletDamage: 1
   baseScore: 50
   Vines: {fileID: 1606702844}
