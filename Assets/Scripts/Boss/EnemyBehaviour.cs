@@ -63,6 +63,7 @@ public class EnemyBehaviour : MonoBehaviour
         {
             Phase1 = false;
             Phase2 = true;
+
         }
     
         if (Health < 251)
@@ -76,7 +77,7 @@ public class EnemyBehaviour : MonoBehaviour
             anim.SetBool("Phase3", false);
             anim.SetBool("Phase1", true);
             BossShoot();
-
+            FinalPhase.SetActive(false);
             Vines.StopAllCoroutines();
         }
         else if(Phase2)
@@ -84,6 +85,7 @@ public class EnemyBehaviour : MonoBehaviour
             anim.SetBool("Phase1", false);
             anim.SetBool("Phase2", true);
             Vines.enabled = true;
+            FinalPhase.SetActive(false);
         }
         
         if(Phase3)

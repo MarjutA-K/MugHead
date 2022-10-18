@@ -75,6 +75,8 @@ public class PlayerController : MonoBehaviour
         {
             Cooldown();
         }
+
+        StayInWindow();
     }
 
     private void FixedUpdate()
@@ -144,6 +146,12 @@ public class PlayerController : MonoBehaviour
             BulletAmount += 5;
             ShootCooldown = 2;
         }
+    }
+
+    void StayInWindow()
+    {
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -6f, 6f),
+            Mathf.Clamp(transform.position.y, -4f, 4f), transform.position.z);
     }
 
     IEnumerator HitDetect()

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LoopingAttack : MonoBehaviour
 {
-    float cooldown;
+    public float cooldown;
     float nextAttack;
 
     public GameObject ChibakuTensei;
@@ -13,7 +13,7 @@ public class LoopingAttack : MonoBehaviour
 
     void Start()
     {
-        cooldown = 13f;
+        cooldown = 7f;
         nextAttack = Time.time;
 
     }

@@ -28,6 +28,11 @@ public class LastPhase : MonoBehaviour
     void Update()
     {
         MoveObject();
+
+        if(!Prefabs.activeInHierarchy)
+        {
+            Instantiate(Prefabs, AttackSpawnPlace.position, AttackSpawnPlace.rotation);
+        }
     }
 
 
